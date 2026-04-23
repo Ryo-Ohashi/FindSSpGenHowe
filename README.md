@@ -4,7 +4,7 @@ This repository provides the **Magma** implementation of the algorithm proposed 
 
 ## Usage
 
-You can run the main scripts by specifying the parameters `p1` and `p2` in Magma. The script processes all prime numbers $p$ in the range $p_1 < p \le p_2$. 
+You can run the main scripts by specifying the parameters `p1` and `p2` in Magma. The script processes all primes $p$ in the range $p_1 < p \le p_2$; however, for $g=4$, results are only output for $p \equiv 1 \pmod{6}$ due to Corollary 3.2.
 The output format varies depending on the genus $g$:
 
 | Genus | Output | Reference |
@@ -14,7 +14,7 @@ The output format varies depending on the genus $g$:
 | **$g=6$** | Parameters $(s^3,t^3)$ for superspecial curve $Z_{s,t}$ | Section 5 |
 
 ### Example
-To output $(s,t)$ such that $X_{s,t}$ is superspecial for all primes $p$ with $7 < p \le 20000$, use the following command:
+To output $(s,t)$ such that $X_{s,t}$ is superspecial for primes $p$ with $7 < p \le 20000$ and $p \equiv 1 \pmod{6}$, use the following command:
 
 ```bash
 magma p1:=7 p2:=20000 FindSSpGenHowe/g=4/main.m
